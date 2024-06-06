@@ -5,16 +5,16 @@ def generate_password(length, use_letters, use_numbers, use_symbols):
     char_pool = ''
 
     if use_letters:
-        char_pool += string.ascii_letters  # a-z, A-Z
+        char_pool += string.ascii_letters  
     if use_numbers:
-        char_pool += string.digits  # 0-9
+        char_pool += string.digits 
     if use_symbols:
-        char_pool += string.punctuation  # !@#$%^&*()_+-=[]{}|;:,.<>?/~`
+        char_pool += string.punctuation  
 
     if not char_pool:
         raise ValueError("At least one character type must be selected")
 
-    # Generate password
+   
     password = ''.join(random.choice(char_pool) for _ in range(length))
     return password
 
